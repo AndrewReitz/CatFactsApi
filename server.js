@@ -6,11 +6,7 @@
 var express = require('express')
 , gzippo = require('gzippo') //Gzip files that can https://github.com/tomgco/gzippo
 , connect = require('connect')
-, minify = require('./code/minify.js')
 , routes = require('./routes');
-
-//run minification of files (server starts b4 this is done, if client side js errors this is why)
-minify.run;
 
 var app = module.exports = express.createServer();
 
@@ -40,7 +36,6 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
-app.get('/.json', routes.getJson);
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
