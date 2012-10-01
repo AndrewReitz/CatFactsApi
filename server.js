@@ -4,8 +4,6 @@
  */
 
 var express = require('express')
-, gzippo = require('gzippo') //Gzip files that can https://github.com/tomgco/gzippo
-, connect = require('connect')
 , routes = require('./routes');
 
 var app = module.exports = express.createServer();
@@ -19,10 +17,7 @@ app.configure(function(){
     app.set('view engine', 'jade');
     app.use(express.bodyParser());
     app.use(express.methodOverride());
-    app.use(require('stylus').middleware({ src: pub }));
     app.use(app.router);
-    app.use(gzippo.staticGzip(pub));
-    app.use(gzippo.compress());
 });
 
 app.configure('development', function(){
