@@ -110,7 +110,7 @@ var catFacts = [
         "During the nearly 18 hours a day that kittens sleep, an important growth hormone is released. One reason that kittens sleep so much is because a growth hormone is released only during sleep.",
         "Cats have about 130,000 hairs per square inch (20,155 hairs per square centimeter).",
         "The heaviest cat on record is Himmy, a Tabby from Queensland, Australia.  He weighed nearly 47 pounds (21 kg). He died at the age of 10.",
-        "The oldest cat on record was Crème Puff from Austin, Texas, who lived from 1967 to August 6, 2005, three days after her 38th birthday. A cat typically can live up to 20 years, which is equivalent to about 96 human years.",
+        "The oldest cat on record was Creme Puff from Austin, Texas, who lived from 1967 to August 6, 2005, three days after her 38th birthday. A cat typically can live up to 20 years, which is equivalent to about 96 human years.",
         "The lightest cat on record is a blue point Himalayan called Tinker Toy, who weighed 1 pound, 6 ounces (616 g). Tinker Toy was 2.75 inches (7 cm)tall and 7.5 inches (19 cm) long.",
         "The tiniest cat on record is Mr. Pebbles, a 2-year-old cat that weighed3 lbs (1.3 k) and was 6.1 inches (15.5 cm) high.",
         "A commemorative tower was built in Scotland for a cat named Towser, who caught nearly 30,000 mice in her lifetime.",
