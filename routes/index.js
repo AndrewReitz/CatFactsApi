@@ -1,3 +1,38 @@
+/*
+    (The MIT License)
+
+    Copyright (c) 2009-2012 pieces029@gmail.com
+
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    'Software'), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+exports.index = function (req, res) {
+    var numberOfCatfacts = parseInt(req.params.numberOfCatFacts || 1, 10);
+    var returnArray = [];
+    for (var i = 0; i < numberOfCatfacts; i++) {
+        var randomnumber = Math.floor(Math.random() * catFacts.length);
+        returnArray.push(catFacts[randomnumber]);
+    }
+    res.json({ catFacts: returnArray });
+};
+
 var catFacts = [
         "Ancient Egyptians believed that \'Bast\' was the mother of all cats on Earth. They also believed that cats were sacred animals.",
         "Ancient Egyptians shaved off their eyebrows to mourn the death of their cats.",
@@ -201,13 +236,3 @@ var catFacts = [
         "Cats lived with soldiers in trenches, where they killed mice during World War I.",
         "A male cat is called a \'tom\' (or a \'gib,\' if neutered), and a female is called a \'molly\' or \'queen.\' The father of a cat is its \'sire,\' and mother is its \'dam.\' An immature cat of either sex is called a \'kitten.\' A group of cats is a \'clowder.\'"
 ];
-
-exports.index = function (req, res) {
-    var numberOfCatfacts = parseInt(req.params.numberOfCatFacts || 1, 10);
-    var returnArray = [];
-    for (var i = 0; i < numberOfCatfacts; i++) {
-        var randomnumber = Math.floor(Math.random() * catFacts.length);
-        returnArray.push(catFacts[randomnumber]);
-    }
-    res.json({ catFacts: returnArray });
-};
