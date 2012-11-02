@@ -4,9 +4,8 @@
  */
 
 var express = require('express');
+var app = express();
 var routes = require('./routes');
-
-var app = module.exports = express.createServer();
 
 // Configuration
 
@@ -32,6 +31,6 @@ app.configure('production', function(){
 app.get('/', routes.index);
 app.get('/:numberOfCatFacts', routes.index);
 
-app.listen(process.env['app_port'] || process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+app.listen(process.env['app_port'] || process.env.PORT || 3000, function () {
+    console.log("Express server listening in %s mode", app.settings.env);
 });
